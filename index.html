@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EASTEREGG STUDIO · 이스터에그 스튜디오</title>
+<meta name="description" content="경기도 고양시 일산 장항동의 촬영 스튜디오. 1F 크로마키 · 2F 화이트 호리존, 무료주차 10대.">
+<style>
+:root{--bg:#0b0c0b;--ink:#f3f4f1;--mute:#9a9d97;--line:#262826;--key:#7cf24a;--card:#141614}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+nav{position:fixed;inset:0 0 auto;z-index:10;background:linear-gradient(#0b0c0bcc,#0b0c0b00)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;letter-spacing:.04em;font-size:18px}
+.logo b{color:var(--key)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;color:#d7d9d3}
+nav ul a:hover{color:var(--key)}
+.hero{position:relative;height:min(100svh,900px);min-height:560px;overflow:hidden}
+.hero img{position:absolute;inset:0;filter:brightness(.55)}
+.hero .wrap{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:80px}
+.eyebrow{font-size:13px;letter-spacing:.24em;color:var(--key);font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(44px,9vw,120px);line-height:.95;font-weight:900;letter-spacing:-.02em;margin:16px 0 20px}
+.hero p{font-size:clamp(16px,2vw,20px);max-width:560px;color:#e2e4df}
+.cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid #ffffff40}
+.btn.key{background:var(--key);color:#0b0c0b;border-color:var(--key)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:110px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4.4vw,52px);line-height:1.15;font-weight:800;letter-spacing:-.02em;margin:14px 0 18px}
+.lead{color:var(--mute);font-size:17px;max-width:640px}
+.stage{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;margin-top:64px}
+.stage.rev{grid-template-columns:1fr 1.25fr}
+.stage.rev .pics{order:2}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pics figure{border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+.pics figure:first-child{grid-column:span 2;aspect-ratio:16/9}
+.floor{font-size:72px;font-weight:900;line-height:1;color:var(--key)}
+.stage h3{font-size:30px;margin:6px 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags span{font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:#cfd2cb;background:var(--card)}
+.colors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:48px}
+.colors figure{aspect-ratio:3/4;border-radius:14px;overflow:hidden;position:relative}
+.colors figcaption{position:absolute;left:14px;bottom:12px;font-size:13px;font-weight:700;letter-spacing:.08em}
+.gear{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.gear div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.gear h4{font-size:17px;margin-bottom:12px}
+.gear li{list-style:none;color:var(--mute);font-size:14px;padding:3px 0}
+.amen{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:40px}
+.amen figure{aspect-ratio:16/10;border-radius:14px;overflow:hidden}
+.loc{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;margin-top:56px;align-items:stretch}
+.addr{font-size:24px;font-weight:800;line-height:1.4}
+.addr small{display:block;font-size:14px;color:var(--mute);font-weight:400;margin-top:8px}
+.facts{margin:28px 0;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts dt{color:var(--key);font-weight:700}
+.facts dd{color:#d7d9d3}
+.maplinks{display:flex;gap:8px;flex-wrap:wrap}
+.maplinks a{font-size:14px;padding:10px 16px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-weight:600}
+.maplinks a:hover{border-color:var(--key)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:440px;background:#1a1c1a}
+.map iframe{width:100%;height:100%;min-height:440px;border:0}
+.ext{margin-top:12px;border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+.contact{text-align:center}
+.contact .tel{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:34px}
+.contact .tel a{font-size:clamp(22px,3.4vw,34px);font-weight:800;padding:18px 30px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.contact .tel a:hover{border-color:var(--key);color:var(--key)}
+.contact .tel small{display:block;font-size:13px;color:var(--mute);font-weight:500}
+.soon{display:inline-block;margin-top:28px;font-size:13px;color:var(--mute);border:1px dashed #3a3d39;padding:8px 14px;border-radius:999px}
+footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  nav ul{display:none}
+  section{padding:80px 0}
+  .stage,.stage.rev,.loc{grid-template-columns:1fr;gap:28px}
+  .stage.rev .pics{order:0}
+  .colors{grid-template-columns:repeat(2,1fr)}
+  .gear{grid-template-columns:1fr 1fr}
+  .amen{grid-template-columns:1fr}
+  .wrap{padding:0 16px}
+}
+@media (max-width:520px){.gear{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">EASTER<b>EGG</b> STUDIO</a>
+  <ul><li><a href="#space">공간</a></li><li><a href="#gear">시설</a></li><li><a href="#location">오시는 길</a></li><li><a href="#contact">문의</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <img src="assets/hero.jpg" alt="이스터에그 스튜디오 1층 크로마키 스테이지">
+  <div class="wrap">
+    <div class="eyebrow">Ilsan · Goyang · Studio Rental</div>
+    <h1>EASTEREGG<br>STUDIO</h1>
+    <p>일산 장항동, 두 개 층의 촬영 스튜디오.<br>1층 크로마키와 2층 화이트 호리존을 한 건물에서.</p>
+    <div class="cta">
+      <a class="btn key" href="#location">오시는 길</a>
+      <a class="btn" href="tel:010-5630-7007">전화 문의</a>
+    </div>
+  </div>
+</header>
+
+<section id="space"><div class="wrap">
+  <div class="eyebrow">Stages</div>
+  <h2>두 층, 두 개의 스테이지</h2>
+  <p class="lead">광고·뮤직비디오·라이브 방송·화보까지. 층마다 대기실과 남녀 구분 화장실이 따로 있어 두 팀이 동시에 써도 동선이 겹치지 않습니다.</p>
+
+  <div class="stage">
+    <div class="pics">
+      <figure><img src="assets/chroma1.jpg" alt="1층 크로마키" loading="lazy"></figure>
+      <figure><img src="assets/chroma2.jpg" alt="1층 크로마키 촬영" loading="lazy"></figure>
+      <figure><img src="assets/plan1.jpg" alt="1층 평면" loading="lazy" style="object-fit:contain;background:#fff"></figure>
+    </div>
+    <div>
+      <div class="floor">1F</div>
+      <h3>크로마키 스테이지</h3>
+      <p class="lead">그린 사이클로라마에 전동 바텐을 걸어 둔 메인 스테이지. 차량이 그대로 들어올 수 있어 자동차·대형 소품 촬영에 맞습니다.</p>
+      <div class="tags"><span>그린 사이클로라마</span><span>차량 진입 가능</span><span>대기실 1</span><span>남녀 화장실 구분</span></div>
+    </div>
+  </div>
+
+  <div class="stage rev">
+    <div class="pics">
+      <figure><img src="assets/white1.jpg" alt="2층 화이트 호리존" loading="lazy"></figure>
+      <figure><img src="assets/white3.jpg" alt="2층 촬영 현장" loading="lazy"></figure>
+      <figure><img src="assets/plan2.jpg" alt="2층 평면" loading="lazy" style="object-fit:contain;background:#fff"></figure>
+    </div>
+    <div>
+      <div class="floor">2F</div>
+      <h3>화이트 호리존</h3>
+      <p class="lead">천창 트러스 아래 넓게 펼쳐진 화이트 호리존. 화물 엘리베이터로 장비 반입이 편합니다.</p>
+      <div class="tags"><span>화이트 호리존</span><span>화물 EV</span><span>대기실 1</span><span>남녀 화장실 구분</span></div>
+    </div>
+  </div>
+
+  <div class="colors">
+    <figure><img src="assets/red.jpg" alt="" loading="lazy"><figcaption>RED</figcaption></figure>
+    <figure><img src="assets/purple.jpg" alt="" loading="lazy"><figcaption>VIOLET</figcaption></figure>
+    <figure><img src="assets/teal.jpg" alt="" loading="lazy"><figcaption>TEAL</figcaption></figure>
+    <figure><img src="assets/orange.jpg" alt="" loading="lazy"><figcaption>AMBER</figcaption></figure>
+  </div>
+  <p class="lead" style="margin-top:14px;font-size:14px">조명만으로 호리존 색을 바꿔 쓸 수 있습니다.</p>
+</div></section>
+
+<section id="gear"><div class="wrap">
+  <div class="eyebrow">Facilities</div>
+  <h2>촬영 시설</h2>
+  <div class="gear">
+    <div><h4>전동 바텐</h4><ul><li>Gridiron 개별 6kW 2조</li><li>12kW × 2</li><li>하중 ~600kg</li></ul></div>
+    <div><h4>대용량 백라이트</h4><ul><li>NANLITE MixPanel 150 × 4</li><li>NANLITE Forza 500 × 4</li><li>비대칭형 소프트박스 × 4</li></ul></div>
+    <div><h4>라이브 방송 · 프롬프터</h4><ul><li>최대 50인치 프롬프터</li><li>ATEM 1 M/E Production Studio 4K</li><li>HyperDeck Studio 4K Pro</li></ul></div>
+    <div><h4>기타</h4><ul><li>워킹패드</li><li>턴테이블</li><li>대형 선풍기</li></ul></div>
+  </div>
+  <div class="amen">
+    <figure><img src="assets/lounge.jpg" alt="대기실" loading="lazy"></figure>
+    <figure><img src="assets/prompter.jpg" alt="프롬프터" loading="lazy"></figure>
+  </div>
+</div></section>
+
+<section id="location"><div class="wrap">
+  <div class="eyebrow">Location</div>
+  <h2>오시는 길</h2>
+  <div class="loc">
+    <div>
+      <div class="addr">경기도 고양시 일산동구<br>노첨길24번길 34-3, 1·2층
+        <small>지번 · 장항동 620-2 &nbsp;|&nbsp; 우편번호 10432</small></div>
+      <dl class="facts">
+        <div><dt>주차</dt><dd>건물 앞 10대 무료 주차</dd></div>
+        <div><dt>자가용</dt><dd>자유로 신평IC·장항IC 인근</dd></div>
+        <div><dt>지하철</dt><dd>3호선 마두역 (직선 약 2km)</dd></div>
+        <div><dt>반입</dt><dd>1층 차량 진입 · 2층 화물 엘리베이터</dd></div>
+      </dl>
+      <div class="maplinks">
+        <a href="https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EB%85%B8%EC%B2%A8%EA%B8%B824%EB%B2%88%EA%B8%B8%2034-3" target="_blank" rel="noopener">네이버 지도</a>
+        <a href="https://map.kakao.com/link/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EB%85%B8%EC%B2%A8%EA%B8%B824%EB%B2%88%EA%B8%B8%2034-3" target="_blank" rel="noopener">카카오맵</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EB%85%B8%EC%B2%A8%EA%B8%B824%EB%B2%88%EA%B8%B8%2034-3" target="_blank" rel="noopener">구글 지도</a>
+      </div>
+      <div class="ext"><img src="assets/exterior.jpg" alt="건물 외관과 입구" loading="lazy"></div>
+    </div>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EB%85%B8%EC%B2%A8%EA%B8%B824%EB%B2%88%EA%B8%B8%2034-3&z=16&hl=ko&output=embed" referrerpolicy="no-referrer-when-downgrade" title="이스터에그 스튜디오 위치"></iframe>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="eyebrow">Contact</div>
+  <h2>대관 문의</h2>
+  <p class="lead" style="margin:0 auto">희망 일자와 사전 답사 일정을 알려 주세요. 연중무휴, 언제든 연락 주시면 됩니다.<br>최소 이용 3시간부터 장기 대관까지 가능합니다.</p>
+  <div class="tel">
+    <a href="tel:010-5630-7007">010-5630-7007</a>
+  </div>
+  <div class="soon">온라인 예약은 준비 중입니다</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>EASTEREGG STUDIO · 운영 (주)오브이제이</div>
+  <div>경기도 고양시 일산동구 노첨길24번길 34-3</div>
+</div></footer>
+
+</body>
+</html>
