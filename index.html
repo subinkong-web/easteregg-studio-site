@@ -102,22 +102,54 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .rf-head h4{font-size:17px}
 .rf-head p{font-size:14px;color:var(--mute)}
 .rf-head b{color:var(--ink)}
-.rf-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:14px;overflow:hidden}
-.rf{padding:20px 18px;display:flex;flex-direction:column;gap:4px;color:#0b0c0b}
-.rf.g{background:#7cf24a}.rf.y{background:#ffd23f}.rf.r{background:#ff5a4e;color:#fff}
-.rf .pct{font-size:clamp(34px,4.5vw,48px);font-weight:900;line-height:1;letter-spacing:-.02em}
-.rf .pct small{font-size:.5em;margin-left:2px}
-.rf .lab{font-size:15px;font-weight:800}
-.rf .when{font-size:13px;font-weight:600;opacity:.8}
-.rf-axis{position:relative;height:30px;margin-top:2px;font-size:12px;color:var(--mute);font-weight:700}
-.rf-axis span{position:absolute;top:10px;white-space:nowrap}
-.rf-axis span::before{content:"";position:absolute;top:-10px;left:50%;width:1px;height:8px;background:#5a5d58}
-.rf-axis span:nth-child(1){left:0}.rf-axis span:nth-child(1)::before{left:0}
-.rf-axis span:nth-child(2){left:33.33%;transform:translateX(-50%)}
-.rf-axis span:nth-child(3){left:66.66%;transform:translateX(-50%)}
-.rf-axis span:nth-child(4){right:0;color:var(--key)}.rf-axis span:nth-child(4)::before{left:auto;right:0}
-@media (max-width:640px){.rf-bar{grid-template-columns:1fr}.rf{flex-direction:row;align-items:center;gap:14px}.rf .when{margin-left:auto;text-align:right}.rf .pct{min-width:84px}.rf-axis{display:none}}
-@media (max-width:860px){.prices,.opts{grid-template-columns:1fr}}
+.paint{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.pt-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pt-head h4{font-size:17px}
+.pt-badge{font-size:13px;font-weight:800;color:#0b0c0b;background:var(--key);padding:6px 12px;border-radius:999px}
+.pt-flow{display:flex;align-items:center;gap:8px;margin:20px 0 18px;flex-wrap:wrap}
+.pt-flow .st{display:flex;align-items:center;gap:8px;background:#ffffff0a;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;font-weight:600}
+.pt-flow .st b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--key);color:#0b0c0b;font-size:13px}
+.pt-flow em{font-style:normal;color:var(--mute)}
+.pt-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pt-card{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:#0f110f}
+.sw{display:flex;gap:5px}
+.sw i{display:block;width:30px;height:62px;border-radius:7px 7px 3px 3px;box-shadow:inset 0 -14px 0 #0000002e}
+.pt-txt h5{font-size:16px;margin-bottom:4px}
+.faces{font-size:13px;font-weight:800;color:var(--key)}
+.pt-won{margin-left:auto;font-size:clamp(26px,3vw,34px);font-weight:900;letter-spacing:-.02em}
+.pt-won small{font-size:15px;color:var(--mute);margin-left:2px}
+.rf-tl{margin-top:4px}
+.rf-brk,.days{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
+.bk{border-radius:10px 10px 0 0;padding:10px 12px;font-size:14px;font-weight:700;color:#0b0c0b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk b{font-size:22px;font-weight:900;margin-right:4px}
+.bk.g{background:#7cf24a}.bk.y{background:#ffd23f}.bk.r{background:#ff5a4e;color:#fff}
+.days{margin-top:4px}
+.dc{display:flex;flex-direction:column;align-items:center;gap:7px}
+.dc i{display:block;width:100%;height:34px;border-radius:0 0 6px 6px}
+.dc.g i{background:#7cf24a66}.dc.y i{background:#ffd23f66}.dc.r i{background:#ff5a4e66}
+.dc span{font-size:13px;font-weight:800;color:#cfd2cb}
+.dc.dday i{background:#ff5a4e;outline:2px solid #fff;outline-offset:-2px}
+.dc.dday span{color:#fff;background:#ff5a4e;padding:2px 8px;border-radius:999px;font-size:12px}
+.dc em{font-style:normal}.dc .sm{display:none}
+.dc span{white-space:nowrap}
+.rf-foot{display:flex;justify-content:space-between;margin-top:10px;font-size:12px;color:var(--mute);font-weight:600}
+.rf-foot .ud{color:#fff}
+.rf-ex{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.rf-ex b{font-weight:800}.rf-ex .g{color:#7cf24a}.rf-ex .y{color:#ffd23f}.rf-ex .r{color:#ff6b60}
+@media (max-width:640px){
+  .pt-cards{grid-template-columns:1fr}
+  .pt-flow em{display:none}
+  .pt-flow{display:grid;grid-template-columns:1fr 1fr}
+  .sw i{width:22px;height:48px}
+  .rf-brk,.days{gap:2px}
+  .bk{padding:8px 6px;font-size:11px;text-align:center;white-space:normal;line-height:1.25}
+  .bk b{display:block;font-size:17px;margin:0}
+  .dc i{height:26px}
+  .dc span{font-size:9.5px;letter-spacing:-.03em}
+  .dc.dday span{padding:1px 5px;font-size:10px}
+  .dc .lg{display:none}.dc .sm{display:inline}
+}
+@media (max-width:860px){.prices{grid-template-columns:1fr}}
 @media (max-width:860px){
   nav ul{display:none}
   section{padding:80px 0}
@@ -185,18 +217,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <span><b>연중무휴</b> 예약</span>
     <span>사전 답사 <b>가능</b></span>
   </div>
-  <div class="opts">
-    <div><h4>호리존 도색 옵션</h4><p>원하는 색으로 칠하고, 끝나면 원상복구까지 저희가 합니다. 페인트·복구 비용 포함.</p>
-      <dl><div><dt>1F 크로마키 · 3면</dt><dd>450,000원</dd></div><div><dt>2F 화이트 · 4면</dt><dd>800,000원</dd></div></dl></div>
+  <div class="paint">
+    <div class="pt-head"><h4>호리존 도색 옵션</h4><span class="pt-badge">페인트 · 원상복구 비용 포함</span></div>
+    <div class="pt-flow">
+      <div class="st"><b>1</b><span>원하는 색 선택</span></div><em>→</em>
+      <div class="st"><b>2</b><span>촬영 전 도색</span></div><em>→</em>
+      <div class="st"><b>3</b><span>촬영</span></div><em>→</em>
+      <div class="st"><b>4</b><span>원상복구는 저희가</span></div>
+    </div>
+    <div class="pt-cards">
+      <div class="pt-card"><div class="sw"><i style="background:#ff5a4e"></i><i style="background:#ffd23f"></i><i style="background:#4aa8ff"></i></div>
+        <div class="pt-txt"><h5>1F 크로마키</h5><span class="faces">3면 도색</span></div><div class="pt-won">450,000<small>원</small></div></div>
+      <div class="pt-card"><div class="sw"><i style="background:#f2a7c3"></i><i style="background:#9b6bff"></i><i style="background:#2ec4a6"></i><i style="background:#ff9a3c"></i></div>
+        <div class="pt-txt"><h5>2F 화이트 호리존</h5><span class="faces">4면 도색</span></div><div class="pt-won">800,000<small>원</small></div></div>
+    </div>
   </div>
   <div class="refund">
     <div class="rf-head"><h4>예약 · 취소 한눈에 보기</h4><p>대관료의 <b>50%를 예약금</b>으로 입금하면 예약 확정. 취소 시 환불은 <b>예약금 기준</b>입니다.</p></div>
-    <div class="rf-bar">
-      <div class="rf g"><span class="pct">100<small>%</small></span><span class="lab">예약금 전액 환불</span><span class="when">사용일 7일 전까지</span></div>
-      <div class="rf y"><span class="pct">50<small>%</small></span><span class="lab">예약금 절반 환불</span><span class="when">사용일 6일 ~ 4일 전</span></div>
-      <div class="rf r"><span class="pct">0<small>%</small></span><span class="lab">환불 불가</span><span class="when">사용일 3일 전 ~ 당일</span></div>
+    <div class="rf-tl">
+      <div class="rf-brk">
+        <div class="bk g" style="grid-column:1/5"><b>100%</b> 예약금 전액 환불</div>
+        <div class="bk y" style="grid-column:5/8"><b>50%</b> 절반 환불</div>
+        <div class="bk r" style="grid-column:8/12"><b>0%</b> 환불 불가</div>
+      </div>
+      <div class="days">
+        <div class="dc g"><i></i><span>D-10</span></div>
+        <div class="dc g"><i></i><span>D-9</span></div>
+        <div class="dc g"><i></i><span>D-8</span></div>
+        <div class="dc g"><i></i><span>D-7</span></div>
+        <div class="dc y"><i></i><span>D-6</span></div>
+        <div class="dc y"><i></i><span>D-5</span></div>
+        <div class="dc y"><i></i><span>D-4</span></div>
+        <div class="dc r"><i></i><span>D-3</span></div>
+        <div class="dc r"><i></i><span>D-2</span></div>
+        <div class="dc r"><i></i><span>D-1</span></div>
+        <div class="dc r dday"><i></i><span><em class="lg">D-DAY</em><em class="sm">당일</em></span></div>
+      </div>
+      <div class="rf-foot"><span>← 그 이전에 취소해도 100%</span><span class="ud">사용일</span></div>
     </div>
-    <div class="rf-axis"><span>예약 확정</span><span>D-7</span><span>D-3</span><span>사용일</span></div>
+    <p class="rf-ex">예) 10월 20일 촬영이면 → <b class="g">10월 13일까지 전액</b> · <b class="y">14~16일 절반</b> · <b class="r">17일부터 환불 불가</b></p>
   </div>
   <p class="pnote">셋업·철수 시간을 포함해 시간 단위로 계산합니다. 종일 통대관·장기 대관은 문의 주시면 할인된 견적을 드립니다.</p>
 </div></section>
