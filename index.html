@@ -72,6 +72,32 @@ h2{font-size:clamp(30px,4.4vw,52px);line-height:1.15;font-weight:800;letter-spac
 .soon{display:inline-block;margin-top:28px;font-size:13px;color:var(--mute);border:1px dashed #3a3d39;padding:8px 14px;border-radius:999px}
 footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.price-sec{background:radial-gradient(1200px 500px at 50% 0,#1d3a12 0,#0b0c0b 70%)}
+.prices{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:14px;margin-top:48px;align-items:stretch}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 28px;display:flex;flex-direction:column}
+.pc.best{border:2px solid var(--key);background:#132010;position:relative}
+.pc .badge{position:absolute;top:-13px;left:28px;background:var(--key);color:#0b0c0b;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+.pc h3{font-size:18px;font-weight:700;color:#d7d9d3}
+.pc .won{font-size:clamp(40px,5vw,58px);font-weight:900;letter-spacing:-.03em;line-height:1;margin:18px 0 6px}
+.pc .won small{font-size:18px;font-weight:700;color:var(--mute);margin-left:4px;letter-spacing:0}
+.pc .per{font-size:14px;color:var(--key);font-weight:700}
+.pc ul{list-style:none;margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:#cfd2cb}
+.pc li{padding:4px 0}
+.pc li::before{content:"✓ ";color:var(--key);font-weight:800}
+.incl{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.incl span{font-size:14px;font-weight:600;padding:10px 16px;border-radius:12px;background:#ffffff0d;border:1px solid var(--line)}
+.incl b{color:var(--key)}
+.pnote{margin-top:18px;font-size:13px;color:var(--mute)}
+.hero .chip{align-self:flex-start;display:inline-flex;align-items:baseline;gap:8px;margin-top:22px;padding:10px 18px;border-radius:14px;background:#0b0c0bb3;border:1px solid var(--key);font-size:15px}
+.hero .chip b{font-size:26px;font-weight:900;color:var(--key)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.opts>div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px}
+.opts h4{font-size:17px;margin-bottom:6px}
+.opts p{font-size:14px;color:var(--mute)}
+.opts dl{margin-top:14px}
+.opts dl div{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.opts dd{font-weight:800}
+@media (max-width:860px){.prices,.opts{grid-template-columns:1fr}}
 @media (max-width:860px){
   nav ul{display:none}
   section{padding:80px 0}
@@ -89,7 +115,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <nav><div class="wrap">
   <a class="logo" href="#top">EASTER<b>EGG</b> STUDIO</a>
-  <ul><li><a href="#space">공간</a></li><li><a href="#gear">시설</a></li><li><a href="#location">오시는 길</a></li><li><a href="#contact">문의</a></li></ul>
+  <ul><li><a href="#price">대관료</a></li><li><a href="#space">공간</a></li><li><a href="#gear">시설</a></li><li><a href="#location">오시는 길</a></li><li><a href="#contact">문의</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top">
@@ -98,12 +124,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="eyebrow">Ilsan · Goyang · Studio Rental</div>
     <h1>EASTEREGG<br>STUDIO</h1>
     <p>일산 장항동, 두 개 층의 촬영 스튜디오.<br>1층 크로마키와 2층 화이트 호리존을 한 건물에서.</p>
+    <a class="chip" href="#price">스튜디오 대관 시간당 <b>110,000원</b>부터 · VAT 포함</a>
     <div class="cta">
-      <a class="btn key" href="#location">오시는 길</a>
+      <a class="btn key" href="#price">대관료 보기</a>
+      <a class="btn" href="#location">오시는 길</a>
       <a class="btn" href="tel:010-5630-7007">전화 문의</a>
     </div>
   </div>
 </header>
+
+<section id="price" class="price-sec"><div class="wrap">
+  <div class="eyebrow">Rental Fee</div>
+  <h2>합리적인 대관료,<br>부가세까지 포함한 가격입니다</h2>
+  <p class="lead">숨은 비용 없이 표시된 금액 그대로. 대기실·화장실·주차까지 기본으로 드립니다.</p>
+  <div class="prices">
+    <div class="pc">
+      <h3>1F 크로마키</h3>
+      <div class="won">110,000<small>원</small></div>
+      <div class="per">시간당 · VAT 포함 <span style="color:var(--mute);font-weight:500">(별도 100,000원)</span></div>
+      <ul><li>그린 사이클로라마</li><li>차량 진입 가능</li><li>개별 대기실 1</li><li>남녀 화장실 구분</li></ul>
+    </div>
+    <div class="pc">
+      <h3>2F 화이트 호리존</h3>
+      <div class="won">110,000<small>원</small></div>
+      <div class="per">시간당 · VAT 포함 <span style="color:var(--mute);font-weight:500">(별도 100,000원)</span></div>
+      <ul><li>화이트 호리존</li><li>화물 엘리베이터</li><li>개별 대기실 1</li><li>남녀 화장실 구분</li></ul>
+    </div>
+    <div class="pc best">
+      <span class="badge">두 층 한 번에 · 가장 경제적</span>
+      <h3>1F + 2F 전체 대관</h3>
+      <div class="won">132,000<small>원</small></div>
+      <div class="per">시간당 · VAT 포함 <span style="color:var(--mute);font-weight:500">(별도 120,000원)</span></div>
+      <ul><li>두 층 스테이지를 한 번에</li><li>한 층 가격에 22,000원만 더</li><li>개별 대기실 2</li><li>최소 3시간부터 장기 대관까지</li><li>종일 통대관은 별도 할인</li></ul>
+    </div>
+  </div>
+  <div class="incl">
+    <span><b>최소 3시간</b>부터</span>
+    <span>무료 주차 <b>10대</b></span>
+    <span>대기실 <b>기본 포함</b></span>
+    <span><b>연중무휴</b> 예약</span>
+    <span>사전 답사 <b>가능</b></span>
+  </div>
+  <div class="opts">
+    <div><h4>호리존 도색 옵션</h4><p>원하는 색으로 칠하고, 끝나면 원상복구까지 저희가 합니다. 페인트·복구 비용 포함.</p>
+      <dl><div><dt>1F 크로마키 · 3면</dt><dd>450,000원</dd></div><div><dt>2F 화이트 · 4면</dt><dd>800,000원</dd></div></dl></div>
+    <div><h4>예약 · 취소</h4><p>대관료의 50%를 입금하시면 예약이 확정됩니다.</p>
+      <dl><div><dt>이용일 7일 전</dt><dd>100% 환불</dd></div><div><dt>이용일 3일 전</dt><dd>50% 환불</dd></div><div><dt>그 이후</dt><dd>환불 불가</dd></div></dl></div>
+  </div>
+  <p class="pnote">셋업·철수 시간을 포함해 시간 단위로 계산합니다. 종일 통대관·장기 대관은 문의 주시면 할인된 견적을 드립니다.</p>
+</div></section>
 
 <section id="space"><div class="wrap">
   <div class="eyebrow">Stages</div>
