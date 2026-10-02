@@ -111,12 +111,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .pt-flow .st b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--key);color:#0b0c0b;font-size:13px}
 .pt-flow em{font-style:normal;color:var(--mute)}
 .pt-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.pt-card{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:#0f110f}
-.sw{display:flex;gap:5px}
+.pt-card{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:#0f110f}
+.pt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.pt-card svg{width:100%;height:auto;display:block}
+.pt-card svg text{font-family:inherit}
 .sw i{display:block;width:30px;height:62px;border-radius:7px 7px 3px 3px;box-shadow:inset 0 -14px 0 #0000002e}
 .pt-txt h5{font-size:16px;margin-bottom:4px}
 .faces{font-size:13px;font-weight:800;color:var(--key)}
-.pt-won{margin-left:auto;font-size:clamp(26px,3vw,34px);font-weight:900;letter-spacing:-.02em}
+.pt-won{white-space:nowrap;font-size:clamp(26px,3vw,34px);font-weight:900;letter-spacing:-.02em}
 .pt-won small{font-size:15px;color:var(--mute);margin-left:2px}
 .rf-tl{margin-top:4px}
 .rf-brk,.days{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
@@ -226,10 +228,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="st"><b>4</b><span>원상복구는 저희가</span></div>
     </div>
     <div class="pt-cards">
-      <div class="pt-card"><div class="sw"><i style="background:#ff5a4e"></i><i style="background:#ffd23f"></i><i style="background:#4aa8ff"></i></div>
-        <div class="pt-txt"><h5>1F 크로마키</h5><span class="faces">3면 도색</span></div><div class="pt-won">450,000<small>원</small></div></div>
-      <div class="pt-card"><div class="sw"><i style="background:#f2a7c3"></i><i style="background:#9b6bff"></i><i style="background:#2ec4a6"></i><i style="background:#ff9a3c"></i></div>
-        <div class="pt-txt"><h5>2F 화이트 호리존</h5><span class="faces">4면 도색</span></div><div class="pt-won">800,000<small>원</small></div></div>
+      <div class="pt-card">
+        <div class="pt-top"><div><h5>1F 크로마키</h5><span class="faces">뒷벽 · 옆벽 · 바닥 = 3면</span></div><div class="pt-won">450,000<small>원</small></div></div>
+        <svg viewBox="0 0 500 310" role="img" aria-label="도색 면 표시"><polygon points="110,180 410,180 340,290 40,290" fill="#ff8a3d" fill-opacity=".85" stroke="#0b0c0b" stroke-width="2"/><polygon points="110,40 110,180 40,290 40,150" fill="#ff8a3d" fill-opacity=".6" stroke="#0b0c0b" stroke-width="2"/><polygon points="110,40 410,40 410,180 110,180" fill="#ff8a3d" stroke="#0b0c0b" stroke-width="2"/><polyline points="410,40 340,150 340,290" fill="none" stroke="#5a5d58" stroke-dasharray="5 5" stroke-width="1.5"/><g transform="translate(260,110)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">1</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">뒷벽</text></g><g transform="translate(75,171)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">2</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">옆벽</text></g><g transform="translate(225,235)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">3</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">바닥</text></g><text x="260.0" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#9a9d97">가로 15m</text><text x="422" y="115.0" font-size="13" font-weight="700" fill="#9a9d97">높이 7m</text><text x="387.0" y="240.0" font-size="13" font-weight="700" fill="#9a9d97">깊이 10m</text></svg>
+      </div>
+      <div class="pt-card">
+        <div class="pt-top"><div><h5>2F 화이트 호리존</h5><span class="faces">뒷벽 · 옆벽 · 바닥 · 앞벽 = 4면</span></div><div class="pt-won">800,000<small>원</small></div></div>
+        <svg viewBox="0 0 500 270" role="img" aria-label="도색 면 표시"><polygon points="110,140 410,140 340,250 40,250" fill="#f28cc0" fill-opacity=".85" stroke="#0b0c0b" stroke-width="2"/><polygon points="110,40 110,140 40,250 40,150" fill="#f28cc0" fill-opacity=".6" stroke="#0b0c0b" stroke-width="2"/><polygon points="110,40 410,40 410,140 110,140" fill="#f28cc0" stroke="#0b0c0b" stroke-width="2"/><polyline points="410,40 340,150 340,250" fill="none" stroke="#5a5d58" stroke-dasharray="5 5" stroke-width="1.5"/><polygon points="40,150 120,150 120,250 40,250" fill="#f28cc0" fill-opacity=".92" stroke="#0b0c0b" stroke-width="2"/><g transform="translate(260,90)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">1</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">뒷벽</text></g><g transform="translate(83,113)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">2</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">옆벽</text></g><g transform="translate(225,195)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">3</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">바닥</text></g><g transform="translate(80,200)"><circle r="15" fill="#0b0c0b"/><text y="5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">4</text><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b0c0b">앞벽</text></g><text x="260.0" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#9a9d97">가로 15m</text><text x="422" y="95.0" font-size="13" font-weight="700" fill="#9a9d97">높이 5m</text><text x="387.0" y="200.0" font-size="13" font-weight="700" fill="#9a9d97">깊이 10m</text></svg>
+      </div>
     </div>
   </div>
   <div class="refund">
